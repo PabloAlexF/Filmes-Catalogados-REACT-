@@ -1,0 +1,234 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px 40px;
+  position: relative;
+}
+
+.lista-filmes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0;
+  width: 100%;
+}
+
+article {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+article:hover {
+  transform: translateY(-12px) scale(1.03);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 122, 255, 0.4);
+  box-shadow: 
+    0 24px 80px rgba(0, 122, 255, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.15) inset;
+}
+
+article img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px 24px 0 0;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+article:hover img {
+  transform: scale(1.05);
+}
+
+article h1 {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #007AFF 40%, #5AC8FA 70%, #FF2D55 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 24px 24px 16px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin: 0;
+  text-align: center;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 24px 24px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #007AFF 0%, #0056CC 50%, #003D99 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 4px 16px rgba(0, 122, 255, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  font-feature-settings: 'kern' 1;
+}
+
+article a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+article a:hover {
+  background: linear-gradient(135deg, #0056CC 0%, #003D99 50%, #002966 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 12px 32px rgba(0, 122, 255, 0.5),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+article a:hover::before {
+  left: 100%;
+}
+
+article a:active {
+  transform: translateY(0);
+  transition: transform 0.1s ease;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 110px 20px 40px;
+  }
+  
+  .lista-filmes {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 100px 16px 40px;
+  }
+  
+  .lista-filmes {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  article {
+    border-radius: 24px;
+  }
+  
+  article img {
+    height: 320px;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  article h1 {
+    font-size: 18px;
+    padding: 18px 16px 12px;
+    min-height: 60px;
+  }
+  
+  article a {
+    margin: 0 16px 16px;
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 90px 12px 30px;
+  }
+  
+  .lista-filmes {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  
+  article {
+    margin: 0 auto;
+    max-width: 320px;
+    border-radius: 20px;
+  }
+  
+  article img {
+    height: 300px;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  article h1 {
+    font-size: 16px;
+    padding: 16px 14px 10px;
+    min-height: 55px;
+  }
+  
+  article a {
+    margin: 0 14px 14px;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 80px 8px 20px;
+  }
+  
+  .lista-filmes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  article {
+    max-width: 280px;
+  }
+  
+  article img {
+    height: 280px;
+  }
+  
+  article h1 {
+    font-size: 15px;
+    padding: 14px 12px 8px;
+  }
+  
+  article a {
+    margin: 0 12px 12px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}

@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# 🎬 PrimeFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um aplicativo de filmes moderno e responsivo construído com React, que permite aos usuários navegar, visualizar detalhes e salvar seus filmes favoritos.
 
-## Available Scripts
+## ✨ Funcionalidades
 
-In the project directory, you can run:
+- 🎥 Navegação de filmes em cartaz
+- 📱 Design completamente responsivo
+- ⭐ Sistema de favoritos com localStorage
+- 🔍 Detalhes completos dos filmes
+- 🎨 Interface moderna com glassmorphism
+- 📢 Sistema de notificações personalizado
+- 🎬 Links diretos para trailers no YouTube
 
-### `npm start`
+## 🚀 Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** - Biblioteca JavaScript para interfaces
+- **React Router** - Navegação entre páginas
+- **Axios** - Cliente HTTP para API
+- **CSS3** - Estilização avançada com glassmorphism
+- **TMDB API** - Base de dados de filmes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📱 Responsividade
 
-### `npm test`
+O projeto é totalmente responsivo com breakpoints para:
+- 📱 Smartphones (320px+)
+- 📱 Smartphones landscape (480px+)
+- 📱 Tablets (768px+)
+- 💻 Tablets landscape (1024px+)
+- 🖥️ Desktop (1200px+)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Design
 
-### `npm run build`
+- Interface moderna com efeitos glassmorphism
+- Gradientes coloridos e animações suaves
+- Sistema de notificações personalizado
+- Tema escuro com acentos coloridos
+- Tipografia otimizada para legibilidade
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Instalação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/primeflix.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Entre no diretório
+cd primeflix/flixx
 
-### `npm run eject`
+# Instale as dependências
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Execute o projeto
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Estrutura do Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+├── components/
+│   ├── Header/
+│   └── Notification/
+├── pages/
+│   ├── Home/
+│   ├── Filme/
+│   ├── Favoritos/
+│   └── Error/
+├── services/
+│   └── api.js
+└── routes.js
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎯 Funcionalidades Principais
 
-## Learn More
+### 🏠 Página Inicial
+- Lista dos filmes em cartaz
+- Cards interativos com hover effects
+- Grid responsivo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🎬 Detalhes do Filme
+- Informações completas do filme
+- Botão para salvar nos favoritos
+- Link para trailer no YouTube
+- Sistema de notificações
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ⭐ Favoritos
+- Lista de filmes salvos
+- Persistência com localStorage
+- Botão para remover filmes
+- Mensagem personalizada quando vazio
 
-### Code Splitting
+### 🔔 Notificações
+- Sistema personalizado substituindo alerts
+- Diferentes tipos (sucesso, erro, info)
+- Auto-fechamento e fechamento manual
+- Design consistente com o tema
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Tema Visual
 
-### Analyzing the Bundle Size
+O projeto utiliza um tema escuro moderno com:
+- Efeitos glassmorphism (blur + transparência)
+- Gradientes coloridos (azul, rosa, laranja)
+- Animações suaves e transições
+- Tipografia otimizada (SF Pro Display)
+- Sombras e bordas sutis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📱 Responsividade Completa
 
-### Making a Progressive Web App
+Todos os componentes são totalmente responsivos:
+- Header adaptável
+- Grid de filmes flexível
+- Botões touch-friendly
+- Notificações responsivas
+- Imagens otimizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔧 API
 
-### Advanced Configuration
+Utiliza a **TMDB API** para:
+- Buscar filmes em cartaz
+- Obter detalhes dos filmes
+- Carregar imagens em alta qualidade
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 Licença
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob a licença MIT.
